@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
             child: Padding(
@@ -15,11 +16,11 @@ class HomePage extends StatelessWidget {
               child: Image.asset('assets/logo.png'),
             ),
           ),
-          Stack(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                child: Material(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 2.0),
+            child: Column(
+              children: [
+                Material(
                   elevation: 4.0,
                   child: Container(
                     height: 241,
@@ -37,17 +38,25 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  child: const Text(
-                    'Логин',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 200,
+                    width: 288,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Логин',
+                        border: OutlineInputBorder(),
+                        hintStyle: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 40),
