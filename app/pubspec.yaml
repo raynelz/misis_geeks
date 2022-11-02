@@ -83,6 +83,8 @@ flutter:
           weight: 500
         - asset: fonts/Gilroy-Bold.ttf
           weight: 700
+        - asset: fonts/Gilroy-Light.ttf
+          weight: 400
     
 
   #         style: italic

@@ -38,6 +38,15 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  child: const Text(
+                    'Логин',
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                ),
+              )
             ],
           ),
           Padding(
