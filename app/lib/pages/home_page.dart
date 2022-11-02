@@ -66,6 +66,13 @@ class HomePage extends StatelessWidget {
                             height: 30,
                             width: 230,
                             child: TextField(
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontFamily: 'Gilroy',
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
+                              textAlignVertical: TextAlignVertical.center,
                               controller: _textController,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
@@ -94,7 +101,7 @@ class HomePage extends StatelessWidget {
                             width: 230,
                             child: TextField(
                               style: const TextStyle(
-                                fontSize: 10,
+                                fontSize: 14,
                                 fontFamily: 'Gilroy',
                                 fontWeight: FontWeight.w400,
                               ),
