@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Center(
@@ -15,31 +15,35 @@ class HomePage extends StatelessWidget {
               child: Image.asset('assets/logo.png'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 2.0),
-            child: Material(
-              elevation: 2.0,
-              child: Container(
-                height: 241,
-                width: 288,
-                color: Colors.white,
-                child: const Center(
-                  child: Text(
-                    'Вход',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'Gilroy',
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                child: Material(
+                  elevation: 4.0,
+                  child: Container(
+                    height: 241,
+                    width: 288,
+                    color: Colors.white,
+                    child: Container(
+                      alignment: const Alignment(0, -0.75),
+                      child: const Text(
+                        'Вход',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+            ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 40),
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
-                elevation: 2.0,
+                elevation: 4.0,
                 foregroundColor: Colors.black,
                 backgroundColor: Colors.white,
                 minimumSize: const Size(300, 40),
