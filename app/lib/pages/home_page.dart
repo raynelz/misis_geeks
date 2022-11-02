@@ -31,6 +31,7 @@ class HomePage extends StatelessWidget {
                         'Вход',
                         style: TextStyle(
                           fontSize: 20,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                     ),
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
                 textStyle: const TextStyle(
                   fontSize: 14,
                   fontFamily: 'Gilroy',
-                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
               onPressed: () {},

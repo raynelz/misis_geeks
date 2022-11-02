@@ -80,7 +80,9 @@ flutter:
     - family: Gilroy
       fonts:
         - asset: fonts/Gilroy-Medium.ttf
-          style: normal
+          weight: 500
+        - asset: fonts/Gilroy-Bold.ttf
+          weight: 700
     
 
   #         style: italic
