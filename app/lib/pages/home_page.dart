@@ -1,7 +1,11 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   final _textController = TextEditingController();
+  final _textController1 = TextEditingController();
+
   HomePage({super.key});
   @override
   Widget build(BuildContext context) {
@@ -89,7 +93,14 @@ class HomePage extends StatelessWidget {
                             height: 30,
                             width: 230,
                             child: TextField(
-                              controller: _textController,
+                              style: const TextStyle(
+                                fontSize: 10,
+                                fontFamily: 'Gilroy',
+                                fontWeight: FontWeight.w400,
+                              ),
+                              maxLines: 1,
+                              textAlignVertical: TextAlignVertical.center,
+                              controller: _textController1,
                               decoration: const InputDecoration(
                                 border: OutlineInputBorder(),
                               ),
