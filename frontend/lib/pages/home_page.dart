@@ -1,6 +1,6 @@
 // ignore_for_file: unused_field
-
 import 'package:flutter/material.dart';
+import 'package:hack_app/pages/pull_page.dart';
 
 class HomePage extends StatelessWidget {
   final _textController = TextEditingController();
@@ -14,11 +14,14 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(
+            height: 60,
+          ),
           Center(
-            child: Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: Image.asset('assets/logo.png'),
-            ),
+            child: Image.asset('assets/logo.png'),
+          ),
+          const SizedBox(
+            height: 22,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 2.0),
@@ -42,11 +45,12 @@ class HomePage extends StatelessWidget {
                             'Вход',
                             style: TextStyle(
                               fontSize: 20,
+                              fontFamily: 'Gilroy',
                               fontWeight: FontWeight.w700,
                             ),
                           ),
                           const SizedBox(
-                            height: 29,
+                            height: 22,
                           ),
                           Container(
                             alignment: const Alignment(-0.75, -1),
@@ -142,7 +146,12 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PullPage()),
+              );
+            },
             child: const Text('Войти'),
           ),
           const SizedBox(
@@ -152,6 +161,18 @@ class HomePage extends StatelessWidget {
             'Забыли пароль?',
             style: TextStyle(
               fontSize: 14,
+              fontFamily: 'Gilroy',
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          Text(
+            'Техническая поддержка',
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey[400],
               fontFamily: 'Gilroy',
               fontWeight: FontWeight.w400,
             ),
